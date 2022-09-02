@@ -34,6 +34,7 @@ function App() {
         document.addEventListener('keydown', e => {
             if (e.key === 'Enter') {
                 inputMenuList();
+                e.preventDefault();
             }
         })
         document.addEventListener('keyup', e => {
@@ -54,7 +55,6 @@ function App() {
 
     function listCnt() {
         let listCnt = document.querySelectorAll('#espresso-menu-list li').length;
-        console.log(listCnt)
         document.querySelector('#menu-cnt').innerHTML = `
         총 ${listCnt}개
         `;
